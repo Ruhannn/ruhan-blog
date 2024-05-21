@@ -18,6 +18,7 @@ export async function getAllPostsFromNotion(): Promise<Post[]> {
       const pageBlock = block[pageId]?.value;
       if (
         pageBlock?.type === 'page' &&
+                // @ts-ignore
         pageBlock?.properties?.[propertyMap['Slug']]
       ) {
         const { properties, last_edited_time } = pageBlock;
@@ -31,18 +32,30 @@ export async function getAllPostsFromNotion(): Promise<Post[]> {
         const lastEditedAt = dates[0];
 
         const id = pageId || 'fab91f453a264df4bd0fd11ae516e18e';
+                // @ts-ignore
+
         const slug = properties?.[propertyMap['Slug']]?.[0]?.[0] || '';
+                // @ts-ignore
+
         const title = properties?.[propertyMap['Page']]?.[0]?.[0] || '';
         const categories = (
+                  // @ts-ignore
+
           properties?.[propertyMap['Category']]?.[0]?.[0] || ''
         ).split(',');
         const cover =
+                // @ts-ignore
+
           properties?.[propertyMap['Cover']]?.[0]?.[1]?.[0]?.[1] || '';
         const date =
+                // @ts-ignore
+
           properties?.[propertyMap['Date']]?.[0]?.[1]?.[0]?.[1]?.[
             'start_date'
           ] || '';
         const published =
+                // @ts-ignore
+
           properties?.[propertyMap['Published']]?.[0]?.[0] === 'Yes' || false;
 
         allPosts.push({
