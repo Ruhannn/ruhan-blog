@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+html {
+  scroll-behavior: smooth;
+}
+
+a,
+div,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+:root {
+  --color: #7aa2f7;
+}
+.notion-inline-code {
+  color: var(--color) !important;
+}
+
+.notion-red {
+  color: var(--color) !important;
+}
+
+.notion-table-of-contents-item {
+  border-radius: 4px;
+}
+
+.imageCon img {
+  border-radius: 8px !important;
+  object-fit: contain;
+}
+.notion-table-of-contents-item span {
+  color: black;
+}
+.dark .notion-table-of-contents-item span {
+  color: white;
+  transition: color 0.5s;
+}
+
+.notion-table-of-contents-active-item span {
+  color: var(--color) !important;
+  transition: color 0.5s;
+}
+.notion-code {
+  overflow: hidden !important;
+  font-family: 'JetBrains Mono', monospace !important;
+}
+.notion-code > code {
+  font-family: 'JetBrains Mono', monospace !important;
+}
+.notion-code > code > span {
+  font-family: 'JetBrains Mono', monospace !important;
+}
+/* scrool */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+  transition: all 3s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a8bbbf;
+}
+.dark-mode ::-webkit-scrollbar-thumb {
+  background-color: #171616;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+  transition: all 3s ease-in-out;
+}
+
+.dark-mode ::-webkit-scrollbar-thumb:hover {
+  background-color: #333;
+}

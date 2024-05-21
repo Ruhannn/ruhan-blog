@@ -1,0 +1,29 @@
+.notion-header,
+.notion-header .notion-nav-header,
+.notion-collection-row {
+  @apply hidden;
+}
+
+.notion-frame {
+  @apply w-[90vw];
+}
+
+.notion {
+  @apply !bg-transparent;
+}
+
+.notion-aside-table-of-contents {
+  @apply fixed right-[50px] top-[220px] w-2/3 max-w-[300px]  bg-gray-300 bg-transparent p-5 ;
+}
+
+.notion-aside-table-of-contents-header {
+  @apply hidden;
+}
+
+.notion-table-of-contents-item-body {
+  @apply truncate py-[1px];
+}
+
+.notion-page-content img {
+  position: static !important;
+}
